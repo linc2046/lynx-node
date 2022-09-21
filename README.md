@@ -1,6 +1,7 @@
 # lynx-node
 
 [![npm version](https://badge.fury.io/js/lynx-node.svg)](https://badge.fury.io/js/lynx-node)
+![GitHub](https://img.shields.io/github/license/linc2046/lynx-node)
 
 This project was bootstrapped by [create-neon](https://www.npmjs.com/package/create-neon).
 
