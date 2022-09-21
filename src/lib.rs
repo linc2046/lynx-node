@@ -8,12 +8,10 @@ use std::rc::Rc;
 fn run(mut cx: FunctionContext) -> JsResult<JsString> {
     // https://neon-bindings.com/docs/functions
     let handles = cx.argument::<JsString>(0)?;
-    let input = format!("{:?}", handles.upcast::<JsValue>());
-
-    println!("{:?}", input);
-
+    let input = handles.value(&mut cx);
     let program = Parser::get(&input.as_str()).parse_program();
     let mut evaluator = Evaluator::new(Rc::new(RefCell::new(Env::new())));
+    
     evaluator.builtin();
 
     match evaluator.eval_program(program) {
