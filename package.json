@@ -2,6 +2,7 @@
   "name": "lynx-node",
   "version": "0.1.1",
   "description": "node addon for lynx language",
+  "repository": "https://github.com/linc2046/lynx-node",
   "main": "index.node",
   "scripts": {
     "build": "cargo-cp-artifact -nc index.node -- cargo build --message-format=json-render-diagnostics",
